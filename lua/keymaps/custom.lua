@@ -50,6 +50,13 @@ local general_map = {
             end,
             desc = "Open FZF files",
         },
+        {
+            "<leader>f/",
+            function()
+                require("fzf-lua").live_grep()
+            end,
+            desc = "Live Grep"
+        }
 
     }
 }

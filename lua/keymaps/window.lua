@@ -5,14 +5,19 @@ local general_map = {
     {
         mode = { "n" },
         {
-            "<leader>sv",
+            "<leader>w",
+            group = "Window",
+            desc = "Window management"
+        },
+        {
+            "<leader>wv",
             function()
                 vim.cmd([[vsp]])
             end,
             desc = "create a vertical window"
         },
         {
-            "<leader>sh",
+            "<leader>wh",
             function() 
                 vim.cmd([[sp]])
             end,

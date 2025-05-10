@@ -7,6 +7,14 @@ require("keymaps.scratch")
 vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true })
 vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
 
+-- disable arrow keys
+vim.keymap.set({'n', 'v', 'i'}, '<LEFT>', '<NOP>', { noremap = true, silent = true })
+vim.keymap.set({'n', 'v', 'i'}, '<RIGHT>', '<NOP>', { noremap = true, silent = true })
+vim.keymap.set({'n', 'v', 'i'}, '<UP>', '<NOP>', { noremap = true, silent = true })
+vim.keymap.set({'n', 'v', 'i'}, '<DOWN>', '<NOP>', { noremap = true, silent = true })
+
+vim.keymap.set('n', '<Esc>', ':nohlsearch<CR><Esc>', { noremap = true, silent = true })
+
 local which_key = require("which-key")
 
 --@type which_key.Spec
@@ -27,7 +35,7 @@ local general_map = {
             function()
                 vim.cmd([[luafile %]])
             end,
-            desc = "Reload current lua file"
+            desc = "Resource the configuration"
         }
     },
 }

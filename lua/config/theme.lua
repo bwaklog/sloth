@@ -1,17 +1,17 @@
 -- its the default, ik its stupid but nice
-vim.cmd([[colorscheme habamax]])
-vim.cmd([[
-highlight Normal guibg=NONE ctermbg=NONE
-highlight NormalNC guibg=NONE ctermbg=NONE
-highlight SignColumn guibg=NONE ctermbg=NONE
-highlight VertSplit guibg=NONE ctermbg=NONE
-highlight StatusLine guibg=#2c212e guifg=#db7692 ctermbg=NONE
-
-highlight NormalFloat guibg=NONE ctermbg=NONE
-highlight FloatBorder guibg=NONE ctermbg=NONE
-
-highlight Visual guibg=#403d52 guifg=NONE gui=NONE
-]])
+vim.cmd([[colorscheme rose-pine]])
+-- vim.cmd([[
+-- highlight Normal guibg=NONE ctermbg=NONE
+-- highlight NormalNC guibg=NONE ctermbg=NONE
+-- highlight SignColumn guibg=NONE ctermbg=NONE
+-- highlight VertSplit guibg=NONE ctermbg=NONE
+-- highlight StatusLine guibg=#2c212e guifg=#db7692 ctermbg=NONE
+--
+-- highlight NormalFloat guibg=NONE ctermbg=NONE
+-- highlight FloatBorder guibg=NONE ctermbg=NONE
+--
+-- highlight Visual guibg=#403d52 guifg=NONE gui=NONE
+-- ]])
 
 vim.api.nvim_set_hl(0, "StatuslineGit", { fg = "#191724", bg = "#eb6f92" })
 vim.opt.statusline =

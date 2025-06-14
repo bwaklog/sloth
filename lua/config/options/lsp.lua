@@ -11,5 +11,6 @@ vim.lsp.enable({
     "gopls",
     "rust_analyzer",
     "lua_ls",
-    "hls"
+    "hls",
+    "clangd"
 })

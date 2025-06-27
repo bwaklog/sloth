@@ -9,6 +9,9 @@ require("keymaps.scratch")
 vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true })
 vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
 
+vim.keymap.set("n", "j", "gj", { noremap = true, silent = true })
+vim.keymap.set("n", "k", "gk", { noremap = true, silent = true })
+
 -- disable arrow keys
 vim.keymap.set({ 'n', 'v', 'i' }, '<LEFT>', '<NOP>', { noremap = true, silent = true })
 vim.keymap.set({ 'n', 'v', 'i' }, '<RIGHT>', '<NOP>', { noremap = true, silent = true })

@@ -34,6 +34,17 @@ return {
     },
 
     {
+        "shaunsingh/nord.nvim",
+        config = function()
+            vim.g.nord_disable_background = true
+            vim.g.nord_cursorline_transparent = true
+            vim.g.nord_borders = true
+            vim.g.nord_contrast = false
+        end,
+    },
+
+
+    {
         "sainnhe/gruvbox-material",
         lazy = false,
         priority = 1000,

@@ -1,6 +1,6 @@
 vim.diagnostic.config({
-    virtual_text = true,
-    virtual_lines = false
+    -- virtual_text = false,
+    virtual_lines = true,
 })
 
 -- language servers
@@ -12,5 +12,11 @@ vim.lsp.enable({
     "rust_analyzer",
     "lua_ls",
     "hls",
-    "clangd"
+    "clangd",
+    "zls",
+})
+
+local lspconfig = require("lspconfig")
+lspconfig.zls.setup({
+    cmd = { "/usr/local/bin/zls" },
 })

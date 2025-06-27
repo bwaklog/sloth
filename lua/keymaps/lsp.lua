@@ -1,7 +1,7 @@
-vim.api.nvim_create_autocmd('LspAttach', {
+vim.api.nvim_create_autocmd("LspAttach", {
     -- group = vim.api.nvim_create_augroup('my.lsp', {}),
     callback = function(event)
-        vim.keymap.del('n', 'K', { buffer = event.buf })
+        -- vim.keymap.del('n', 'K', { buffer = event.buf })
 
         -- jump to definition
         vim.keymap.set("n", "L", vim.diagnostic.open_float, { desc = "Hover Documentatio" })
@@ -19,5 +19,5 @@ vim.api.nvim_create_autocmd('LspAttach', {
         -- implementation
         -- references
         -- rename
-    end
+    end,
 })

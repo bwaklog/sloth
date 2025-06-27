@@ -1,4 +1,4 @@
-vim.opt.clipboard = 'unnamedplus'
+vim.opt.clipboard = "unnamedplus"
 
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -15,4 +15,4 @@ vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
 
-vim.o.winborder = 'rounded'
+vim.o.winborder = "none"

@@ -13,6 +13,6 @@ vim.opt.wrap = false
 
 vim.opt.incsearch = true
 
-vim.opt.termguicolors = false
+vim.opt.termguicolors = true
 
 vim.o.winborder = "none"

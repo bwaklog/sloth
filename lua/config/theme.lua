@@ -1,8 +1,8 @@
 -- its the default, ik its stupid but nice
 -- vim.cmd([[colorscheme tokyonight]])
--- vim.cmd([[colorscheme gruvbox-material]])
+vim.cmd([[colorscheme gruvbox-material]])
 -- vim.cmd([[
-vim.cmd([[colorscheme nord]])
+-- vim.cmd([[colorscheme nord]])
 -- highlight Normal guibg=NONE ctermbg=NONE
 -- highlight NormalNC guibg=NONE ctermbg=NONE
 -- highlight SignColumn guibg=NONE ctermbg=NONE

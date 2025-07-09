@@ -1,6 +1,14 @@
 -- its the default, ik its stupid but nice
 -- vim.cmd([[colorscheme tokyonight]])
-vim.cmd([[colorscheme gruvbox-material]])
+-- vim.cmd([[colorscheme gruvbox-material]])
+
+vim.g.tundra_biome = 'jungle'
+vim.cmd([[colorscheme tundra]])
+
+-- vim.cmd([[colorscheme github_light]])
+-- vim.cmd([[colorscheme jb]])
+-- vim.o.background = "light"
+
 -- vim.cmd([[
 -- vim.cmd([[colorscheme nord]])
 -- highlight Normal guibg=NONE ctermbg=NONE

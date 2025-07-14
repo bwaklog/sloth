@@ -1,9 +1,10 @@
 -- its the default, ik its stupid but nice
 -- vim.cmd([[colorscheme tokyonight]])
--- vim.cmd([[colorscheme gruvbox-material]])
+vim.cmd([[colorscheme gruvbox-material]])
 
-vim.g.tundra_biome = 'jungle'
-vim.cmd([[colorscheme tundra]])
+-- vim.g.tundra_biome = 'jungle'
+-- vim.cmd([[colorscheme rose-pine]])
+-- vim.cmd([[colorscheme farout]])
 
 -- vim.cmd([[colorscheme github_light]])
 -- vim.cmd([[colorscheme jb]])

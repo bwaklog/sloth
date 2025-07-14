@@ -8,13 +8,15 @@ return {
         require("fzf-lua").setup {
             winopts = {
                 border  = "none",
-                height  = 1,
+                height  = 0.3,
                 width   = 1,
                 row     = 1,
-
-                preview = {
-                    border = "none",
-                }
+                preview = "none",
+                -- preview = {
+                --     -- default = 'bat',
+                --     border = "none",
+                --     title = true,
+                -- }
             }
         }
     end

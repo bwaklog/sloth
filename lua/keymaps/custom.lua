@@ -19,7 +19,11 @@ local general_map = {
     {
         "<leader>F",
         function()
-            require("neo-tree.command").execute({})
+            -- require("neo-tree.command").execute({})
+            require("neo-tree.command").execute({
+                position = "bottom",
+                toggle = true,
+            })
         end,
         desc = "Open Neotree",
     },

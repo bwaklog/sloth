@@ -17,7 +17,7 @@ return {
             position = "float",
         },
         filesystem = {
-            -- hijack_netrw_behavior = "open_default"
+            -- hijack_netrw_behavior = "disabled"
         }
     },
 }

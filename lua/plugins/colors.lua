@@ -27,6 +27,40 @@ return {
             transparent_background = true,
         }
     },
+    {
+        "webhooked/kanso.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {
+            transparent = true,
+        }
+    },
+
+    {
+        "thallada/farout.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {},
+    },
+
+    {
+        "rebelot/kanagawa.nvim",
+        config = function()
+            --@allow
+            require("kanagawa").setup({
+                transparent = true,
+                colors = {
+                    theme = {
+                        all = {
+                            ui = {
+                                bg_gutter = "none",
+                            },
+                        },
+                    },
+                },
+            })
+        end,
+    },
 
     {
         "nickkadutskyi/jb.nvim",

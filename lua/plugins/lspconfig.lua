@@ -54,7 +54,10 @@ return {
         ---@module 'blink.cmp'
         ---@type blink.cmp.Config
         opts = {
-            keymap = { preset = 'default' },
+            keymap = {
+                preset = 'default',
+                ["<CR>"] = { "accept", "fallback" }
+            },
             sources = {
                 default = { "lazydev", "lsp", "path", "snippets", "buffer" },
                 providers = {

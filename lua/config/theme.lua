@@ -1,6 +1,15 @@
 -- its the default, ik its stupid but nice
--- vim.cmd([[colorscheme tokyonight]])
-vim.cmd([[colorscheme gruvbox-material]])
+
+require("tokyonight").setup({
+    on_colors = function(colors)
+        colors.bg = "#14161b"
+    end,
+})
+
+vim.cmd([[colorscheme tokyonight-night]])
+-- vim.cmd([[colorscheme gruvbox-material]])
+
+
 
 -- vim.g.tundra_biome = 'jungle'
 -- vim.cmd([[colorscheme rose-pine]])

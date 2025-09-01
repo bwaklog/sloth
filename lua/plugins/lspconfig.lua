@@ -26,6 +26,13 @@ return {
                 group = vim.api.nvim_create_augroup('my.lsp', {}),
                 callback = function(args)
                     local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
+                    local bufnr = args.buf
+
+                    -- Enable inlay hints if supported
+                    if client:supports_method('textDocument/inlayHint') then
+                        vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+                    end
+
                     if client:supports_method('textDocument/implementation') then
                         -- Create a keymap for vim.lsp.buf.implementation ...
                     end

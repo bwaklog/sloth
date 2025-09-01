@@ -1,3 +1,4 @@
+local func = require "vim.func"
 return {
     {
         "rose-pine/neovim",

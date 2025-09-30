@@ -11,12 +11,15 @@ return {
                 height  = 0.3,
                 width   = 1,
                 row     = 1,
-                preview = "none",
-                -- preview = {
-                --     -- default = 'bat',
-                --     border = "none",
-                --     title = true,
-                -- }
+                -- preview = "none",
+                preview = {
+                    default     = "bat",       -- requires bat installed
+                    border      = "none",
+                    title       = true,
+                    layout      = "horizontal",
+                    flip_columns = 120,        -- flips preview to left if window > 120 cols
+                    horizontal  = "left:50%",  -- force preview on left, 50% width
+                }
             }
         }
     end

@@ -14,7 +14,7 @@ return {
         -- fill any relevant options here
         popup_border_style = "rounded",
         window = {
-            position = "float",
+            -- position = "float",
         },
         filesystem = {
             -- hijack_netrw_behavior = "disabled"

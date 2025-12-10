@@ -1,4 +1,3 @@
-local func = require "vim.func"
 return {
     {
         "rose-pine/neovim",
@@ -7,7 +6,7 @@ return {
             styles = {
                 bold = true,
                 italic = true,
-                transparency = true,
+                -- transparency = true,
             },
 
             highlight_groups = {
@@ -25,7 +24,7 @@ return {
     {
         'sam4llis/nvim-tundra',
         opts = {
-            transparent_background = true,
+            -- transparent_background = true,
         }
     },
     {
@@ -33,7 +32,7 @@ return {
         lazy = false,
         priority = 1000,
         opts = {
-            transparent = true,
+            -- transparent = false,
         }
     },
 
@@ -49,7 +48,7 @@ return {
         config = function()
             --@allow
             require("kanagawa").setup({
-                transparent = true,
+                -- transparent = true,
                 colors = {
                     theme = {
                         all = {
@@ -92,7 +91,7 @@ return {
         priority = 1000,
         opts = {
             style = "night",
-            transparent = false,
+            -- transparent = false,
             sidebars = "normal", -- style for sidebars, see below
             floats = "normal",
         },
@@ -101,8 +100,8 @@ return {
     {
         "shaunsingh/nord.nvim",
         config = function()
-            vim.g.nord_disable_background = true
-            vim.g.nord_cursorline_transparent = true
+            -- vim.g.nord_disable_background = true
+            -- vim.g.nord_cursorline_transparent = true
             vim.g.nord_borders = true
             vim.g.nord_contrast = false
         end,
@@ -113,7 +112,7 @@ return {
         lazy = false,
         priority = 1000,
         config = function()
-            vim.g.gruvbox_material_transparent_background = 1
+            -- vim.g.gruvbox_material_transparent_background = 1
             vim.g.gruvbox_material_dim_inactive_windows = 1
             vim.g.gruvbox_material_enable_bold = 1
             vim.g.gruvbox_material_background = "hard"
@@ -121,4 +120,27 @@ return {
             -- vim.cmd.colorscheme("gruvbox-material")
         end,
     },
+    {
+        "wincent/base16-nvim",
+        config = function()
+            vim.cmd([[colorscheme gruvbox-dark-hard]])
+            vim.o.background = 'dark'
+            vim.cmd([[hi Normal ctermbg=NONE]])
+            -- Less visible window separator
+            vim.api.nvim_set_hl(0, "WinSeparator", { fg = 1250067 })
+        end
+    }
+    -- {
+    --     "morhetz/gruvbox",
+    --     config = function()
+    --         vim.g.gruvbox_italic = 1
+    --         vim.g.gruvbox_contrast_dark = "hard"
+    --         vim.g.gruvbox_contrast_light = "hard"
+    --         vim.g.gruvbox_invert_selection = 0
+    --         -- vim.cmd([[colorscheme gruvbox]])
+    --     end
+    -- },
+    -- {
+    --     "RRethy/base16-nvim",
+    -- },
 }

@@ -16,3 +16,8 @@ vim.opt.incsearch = true
 vim.opt.termguicolors = true
 
 vim.o.winborder = "none"
+
+vim.opt.fillchars = { eob = " " }
+
+-- please work
+vim.opt.cmdheight = 0

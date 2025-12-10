@@ -7,7 +7,9 @@ require("tokyonight").setup({
 })
 
 -- vim.cmd([[colorscheme tokyonight-night]])
-vim.cmd([[colorscheme gruvbox-material]])
+-- vim.cmd([[colorscheme rose-pine]])
+-- vim.cmd([[colorscheme gruvbox]])
+-- vim.cmd([[colorscheme kanagawa]])
 
 
 
@@ -33,9 +35,33 @@ vim.cmd([[colorscheme gruvbox-material]])
 -- highlight Visual guibg=#403d52 guifg=NONE gui=NONE
 -- ]])
 
-vim.api.nvim_set_hl(0, "StatuslineGit", { fg = "#191724", bg = "#eb6f92" })
-vim.opt.statusline =
-" [%{mode()}]%h %f %m%r %#StatuslineGit#%{get(b:,'gitsigns_status','')}%* %= %y %{&fileencoding} %l:%c ♥  "
+-- vim.api.nvim_set_hl(0, "StatuslineGit", { fg = "#191724", bg = "#eb6f92" })
+-- vim.opt.statusline =
+-- " [%{mode()}]%h %f %m%r %#StatuslineGit#%{get(b:,'gitsigns_status','')}%* %= %y %{&fileencoding} %l:%c ♥  "
+
+-- require('lualine').setup()
 
 -- just incase
--- vim.cmd([[colorscheme rose-pine]])
+require("lualine").setup({
+    sections = {
+        lualine_a = { 'mode' },
+        lualine_b = { 'branch', 'diff', 'diagnostics' },
+        lualine_c = { 'filename' },
+        lualine_x = { 'encoding' },
+        -- lualine_y = { 'progress' },
+        lualine_y = {},
+        lualine_z = { 'location' }
+    },
+    inactive_sections = {
+        lualine_a = {},
+        lualine_b = {},
+        lualine_c = { 'filename' },
+        lualine_x = { 'location' },
+        lualine_y = {},
+        lualine_z = {}
+    },
+    options = {
+        section_separators = '',
+        component_separators = '',
+    }
+})

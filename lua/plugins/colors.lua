@@ -91,9 +91,11 @@ return {
         priority = 1000,
         opts = {
             style = "night",
-            -- transparent = false,
-            sidebars = "normal", -- style for sidebars, see below
-            floats = "normal",
+            transparent = true,
+            styles = {
+                sidebars = "transparent",
+                floats = "transparent",
+            }
         },
     },
 
@@ -120,27 +122,14 @@ return {
             -- vim.cmd.colorscheme("gruvbox-material")
         end,
     },
-    {
-        "wincent/base16-nvim",
-        config = function()
-            vim.cmd([[colorscheme gruvbox-dark-hard]])
-            vim.o.background = 'dark'
-            vim.cmd([[hi Normal ctermbg=NONE]])
-            -- Less visible window separator
-            vim.api.nvim_set_hl(0, "WinSeparator", { fg = 1250067 })
-        end
-    }
     -- {
-    --     "morhetz/gruvbox",
+    --     "wincent/base16-nvim",
     --     config = function()
-    --         vim.g.gruvbox_italic = 1
-    --         vim.g.gruvbox_contrast_dark = "hard"
-    --         vim.g.gruvbox_contrast_light = "hard"
-    --         vim.g.gruvbox_invert_selection = 0
-    --         -- vim.cmd([[colorscheme gruvbox]])
+    --         vim.cmd([[colorscheme gruvbox-dark-hard]])
+    --         vim.o.background = 'dark'
+    --         vim.cmd([[hi Normal ctermbg=NONE]])
+    --         -- Less visible window separator
+    --         vim.api.nvim_set_hl(0, "WinSeparator", { fg = 1250067 })
     --     end
-    -- },
-    -- {
-    --     "RRethy/base16-nvim",
-    -- },
+    -- }
 }

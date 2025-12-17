@@ -7,14 +7,15 @@ return {
     config = function()
         require("fzf-lua").setup {
             winopts = {
-                border  = "none",
-                height  = 1,
-                width   = 1,
-                row     = 1,
-                -- preview = "none",
-                preview = {
-                    default = "bat",      -- requires bat installed
-                    -- border       = "none",
+                -- border  = "none",
+                border   = "rounded",
+                height   = 0.8,
+                width    = 0.8,
+                row      = 0.8,
+                backdrop = 100,
+                preview  = {
+                    default = "bat", -- requires bat installed
+                    -- border  = "none",
                     title   = true,
                     -- layout      = "horizontal",
                     -- flip_columns = 120,        -- flips preview to left if window > 120 cols

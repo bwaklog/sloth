@@ -1,14 +1,19 @@
 -- its the default, ik its stupid but nice
 
 require("tokyonight").setup({
+    transparent = true,
+    styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+    },
     on_colors = function(colors)
         colors.bg = "#14161b"
     end,
 })
 
--- vim.cmd([[colorscheme tokyonight-night]])
+vim.cmd([[colorscheme tokyonight-night]])
 -- vim.cmd([[colorscheme rose-pine]])
--- vim.cmd([[colorscheme gruvbox]])
+-- vim.cmd([[colorscheme gruvbox-material]])
 -- vim.cmd([[colorscheme kanagawa]])
 
 

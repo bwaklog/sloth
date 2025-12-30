@@ -1,40 +1,46 @@
 return {
-    {
-        "nvim-treesitter/nvim-treesitter",
-        build = ":TSUpdate",
+	{
+		"nvim-treesitter/nvim-treesitter",
+        branch = "master",
+		build = ":TSUpdate",
+		config = function()
+			local configs = require("nvim-treesitter.configs")
 
-        --@param opts TSConfig
-        config = function()
-            require("nvim-treesitter").setup({
-                ensure_installed = {
-                    "asm",
-                    "bash",
-                    "fish",
-                    "go",
-                    "html",
-                    "javascript",
-                    "json",
-                    "lua",
-                    "markdown",
-                    "markdown_inline",
-                    "python",
-                    "query",
-                    "regex",
-                    "rust",
-                    "tsx",
-                    "typescript",
-                    "vim",
-                    "yaml",
-                },
-                ident = { enabled = true },
-                highlight = {
-                    enable = true,
-                    additional_vim_regex_highlighting = false,
-                },
-            })
-        end
-    },
-    -- {
-    --     "nvim-treesitter/playground"
-    -- }
+			configs.setup({
+				ensure_installed = {
+					"asm",
+					"bash",
+					"c",
+					"cmake",
+					"cpp",
+					"css",
+					"csv",
+					"cuda",
+					"dockerfile",
+					"dot", --Graphviz DOT
+					"fish",
+					"git_rebase",
+					"gitcommit",
+					"go",
+					"html",
+					"javascript",
+					"json",
+					"lua",
+					"make",
+					"nasm",
+					"python",
+					"regex",
+					"rust",
+					"sql",
+					"toml",
+					"typst",
+					"yaml",
+				},
+
+				sync_install = false,
+				highlight = { enable = true },
+				indent = { enable = true },
+			})
+		end,
+	},
 }

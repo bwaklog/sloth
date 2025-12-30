@@ -1,22 +1,20 @@
 -- its the default, ik its stupid but nice
 
-require("tokyonight").setup({
-    transparent = true,
-    styles = {
-        sidebars = "transparent",
-        floats = "transparent",
-    },
-    on_colors = function(colors)
-        colors.bg = "#14161b"
-    end,
-})
+-- require("tokyonight").setup({
+-- transparent = true,
+-- styles = {
+--     sidebars = "transparent",
+--     floats = "transparent",
+-- },
+-- on_colors = function(colors)
+--     colors.bg = "#14161b"
+-- end,
+-- })
 
-vim.cmd([[colorscheme tokyonight-night]])
+vim.cmd([[colorscheme catppuccin-mocha]])
 -- vim.cmd([[colorscheme rose-pine]])
 -- vim.cmd([[colorscheme gruvbox-material]])
 -- vim.cmd([[colorscheme kanagawa]])
-
-
 
 -- vim.g.tundra_biome = 'jungle'
 -- vim.cmd([[colorscheme rose-pine]])
@@ -49,24 +47,24 @@ vim.cmd([[colorscheme tokyonight-night]])
 -- just incase
 require("lualine").setup({
     sections = {
-        lualine_a = { 'mode' },
-        lualine_b = { 'branch', 'diff', 'diagnostics' },
-        lualine_c = { 'filename' },
-        lualine_x = { 'encoding' },
+        lualine_a = { "mode" },
+        lualine_b = { "branch", "diff", "diagnostics" },
+        lualine_c = { "filename" },
+        lualine_x = { "encoding" },
         -- lualine_y = { 'progress' },
         lualine_y = {},
-        lualine_z = { 'location' }
+        lualine_z = { "location" },
     },
     inactive_sections = {
         lualine_a = {},
         lualine_b = {},
-        lualine_c = { 'filename' },
-        lualine_x = { 'location' },
+        lualine_c = { "filename" },
+        lualine_x = { "location" },
         lualine_y = {},
-        lualine_z = {}
+        lualine_z = {},
     },
     options = {
-        section_separators = '',
-        component_separators = '',
-    }
+        section_separators = "",
+        component_separators = "",
+    },
 })

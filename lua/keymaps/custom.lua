@@ -21,7 +21,7 @@ local general_map = {
         function()
             -- require("neo-tree.command").execute({})
             require("neo-tree.command").execute({
-                position = "bottom",
+                position = "right",
                 toggle = true,
             })
         end,
@@ -38,13 +38,13 @@ local general_map = {
         "<leader>/",
         function()
             require("fzf-lua").live_grep()
-        end
+        end,
     },
     {
         {
             "<leader>f",
             group = "FzfLua",
-            desc = "FzfLua"
+            desc = "FzfLua",
         },
         {
             "<leader>ff",
@@ -65,10 +65,9 @@ local general_map = {
             function()
                 require("fzf-lua").live_grep()
             end,
-            desc = "Live Grep"
-        }
-
-    }
+            desc = "Live Grep",
+        },
+    },
 }
 
 which_key.add(general_map)

@@ -27,6 +27,7 @@ return {
             -- transparent_background = true,
         },
     },
+
     {
         "webhooked/kanso.nvim",
         lazy = false,
@@ -37,18 +38,11 @@ return {
     },
 
     {
-        "thallada/farout.nvim",
-        lazy = false,
-        priority = 1000,
-        opts = {},
-    },
-
-    {
         "rebelot/kanagawa.nvim",
         config = function()
             --@allow
             require("kanagawa").setup({
-                -- transparent = true,
+                transparent = true,
                 colors = {
                     theme = {
                         all = {
@@ -114,7 +108,7 @@ return {
         lazy = false,
         priority = 1000,
         config = function()
-            -- vim.g.gruvbox_material_transparent_background = 1
+            vim.g.gruvbox_material_transparent_background = 1
             vim.g.gruvbox_material_dim_inactive_windows = 1
             vim.g.gruvbox_material_enable_bold = 1
             vim.g.gruvbox_material_background = "hard"

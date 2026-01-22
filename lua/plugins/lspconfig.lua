@@ -15,34 +15,35 @@ return {
             },
             { -- optional blink completion source for require statements and module annotations
                 "saghen/blink.cmp",
-                opts = {
-                },
-            }
+                opts = {},
+            },
         },
         config = function()
             -- require("lspconfig").lua_ls.setup {}
             -- require("lspconfig").rust_analyzer.setup {}
-            vim.api.nvim_create_autocmd('LspAttach', {
-                group = vim.api.nvim_create_augroup('my.lsp', {}),
+            vim.api.nvim_create_autocmd("LspAttach", {
+                group = vim.api.nvim_create_augroup("my.lsp", {}),
                 callback = function(args)
                     local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
                     local bufnr = args.buf
 
                     -- Enable inlay hints if supported
-                    if client:supports_method('textDocument/inlayHint') then
+                    if client:supports_method("textDocument/inlayHint") then
                         vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
                     end
 
-                    if client:supports_method('textDocument/implementation') then
+                    if client:supports_method("textDocument/implementation") then
                         -- Create a keymap for vim.lsp.buf.implementation ...
                     end
 
                     -- Auto-format ("lint") on save.
                     -- Usually not needed if server supports "textDocument/willSaveWaitUntil".
-                    if not client:supports_method('textDocument/willSaveWaitUntil')
-                        and client:supports_method('textDocument/formatting') then
-                        vim.api.nvim_create_autocmd('BufWritePre', {
-                            group = vim.api.nvim_create_augroup('my.lsp', { clear = false }),
+                    if
+                        not client:supports_method("textDocument/willSaveWaitUntil")
+                        and client:supports_method("textDocument/formatting")
+                    then
+                        vim.api.nvim_create_autocmd("BufWritePre", {
+                            group = vim.api.nvim_create_augroup("my.lsp", { clear = false }),
                             buffer = args.buf,
                             callback = function()
                                 vim.lsp.buf.format({ bufnr = args.buf, id = client.id, timeout_ms = 1000 })
@@ -51,19 +52,19 @@ return {
                     end
                 end,
             })
-        end
+        end,
     },
     {
         "saghen/blink.cmp",
-        dependencies = { 'rafamadriz/friendly-snippets' },
-        version = '1.*',
+        dependencies = { "rafamadriz/friendly-snippets" },
+        version = "1.*",
 
         ---@module 'blink.cmp'
         ---@type blink.cmp.Config
         opts = {
             keymap = {
-                preset = 'default',
-                ["<CR>"] = { "accept", "fallback" }
+                preset = "default",
+                ["<CR>"] = { "accept", "fallback" },
             },
             sources = {
                 default = { "lazydev", "lsp", "path", "snippets", "buffer" },
@@ -76,7 +77,8 @@ return {
                     },
                 },
             },
-            fuzzy = { implementation = "prefer_rust_with_warning" }
-        }
-    }
+            fuzzy = { implementation = "prefer_rust_with_warning" },
+            completion = { list = { selection = { preselect = false } }, documentation = { auto_show = true } },
+        },
+    },
 }

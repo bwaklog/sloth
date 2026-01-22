@@ -19,13 +19,16 @@ local general_map = {
     {
         "<leader>F",
         function()
-            -- require("neo-tree.command").execute({})
-            require("neo-tree.command").execute({
-                position = "right",
-                toggle = true,
-            })
+            require("oil").open(".")
         end,
-        desc = "Open Neotree",
+        -- function()
+        --     -- require("neo-tree.command").execute({})
+        --     require("neo-tree.command").execute({
+        --         position = "right",
+        --         toggle = true,
+        --     })
+        -- end,
+        desc = "Open Oil",
     },
     {
         "<leader><leader>",

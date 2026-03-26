@@ -64,6 +64,13 @@ local general_map = {
             desc = "Open FZF files",
         },
         {
+            "<leader>fs",
+            function()
+                require("fzf-lua").lsp_document_symbols()
+            end,
+            desc = "Show lsp document symbols",
+        },
+        {
             "<leader>f/",
             function()
                 require("fzf-lua").live_grep()

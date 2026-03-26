@@ -6,7 +6,7 @@ return {
             styles = {
                 bold = true,
                 italic = true,
-                -- transparency = true,
+                transparency = true,
             },
 
             highlight_groups = {
@@ -18,22 +18,6 @@ return {
                 CurSearch = { fg = "base", bg = "leaf", inherit = false },
                 Search = { fg = "text", bg = "leaf", blend = 20, inherit = false },
             },
-        },
-    },
-
-    {
-        "sam4llis/nvim-tundra",
-        opts = {
-            -- transparent_background = true,
-        },
-    },
-
-    {
-        "webhooked/kanso.nvim",
-        lazy = false,
-        priority = 1000,
-        opts = {
-            -- transparent = false,
         },
     },
 

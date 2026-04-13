@@ -3,6 +3,8 @@ vim.diagnostic.config({
     -- virtual_lines = true,
 })
 
+vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+
 -- language servers
 -- :h lspconfig-all
 -- gO

@@ -6,7 +6,7 @@ return {
             styles = {
                 bold = true,
                 italic = true,
-                transparency = true,
+                -- transparency = true,
             },
 
             highlight_groups = {
@@ -20,7 +20,9 @@ return {
             },
         },
     },
-
+    {
+        "y9san9/y9nika.nvim",
+    },
     {
         "rebelot/kanagawa.nvim",
         config = function()

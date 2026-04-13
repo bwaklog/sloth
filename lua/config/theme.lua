@@ -12,9 +12,10 @@
 -- })
 
 -- vim.cmd([[colorscheme catppuccin-mocha]])
-vim.cmd([[colorscheme rose-pine]])
+-- vim.cmd([[colorscheme rose-pine]])
+-- vim.cmd([[colorscheme y9nika]])
 -- vim.cmd([[colorscheme gruvbox-material]])
--- vim.cmd([[colorscheme kanagawa-dragon]])
+vim.cmd([[colorscheme kanagawa-dragon]])
 
 -- vim.g.tundra_biome = 'jungle'
 -- vim.cmd([[colorscheme rose-pine]])
